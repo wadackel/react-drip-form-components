@@ -34,7 +34,7 @@ https://tsuyoshiwada.github.io/react-drip-form-components/
 
 ## DEMO
 
-![Screenshot](todo)
+[![Screenshot](https://raw.githubusercontent.com/tsuyoshiwada/react-drip-form-components/artwork/demo-screenshot.png)](https://tsuyoshiwada.github.io/react-drip-form-components/)
 
 See [Live Demo](https://tsuyoshiwada.github.io/react-drip-form-components/).
 
