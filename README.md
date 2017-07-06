@@ -14,7 +14,9 @@ https://tsuyoshiwada.github.io/react-drip-form-components/
 ## Table of Contents
 
 * [DEMO](#demo)
-* [Install](#install)
+* [Getting Started](#getting-started)
+  * [Installation](#installation)
+  * [Usage](#usage)
 * [API](#api)
   * [shouldDisplayError](#shoulddisplayerror)
   * [shouldDisplaySpinner](#shoulddisplayspinner)
@@ -41,15 +43,24 @@ See [Live Demo](https://tsuyoshiwada.github.io/react-drip-form-components/).
 
 
 
-## Install
+## Getting Started
+
+
+### Installation
+
+[react-drip-form](https://github.com/tsuyoshiwada/react-drip-form) must also be installed.
 
 ```bash
+$ npm install --save react-drip-form
 $ npm install --save react-drip-form-components
 ```
 
-Import the component as follows:
+
+### Usage
 
 ```javascript
+import React from 'react';
+import { dripForm } from 'react-drip-form';
 import {
   Checkbox,
   FieldGroup,
@@ -58,7 +69,47 @@ import {
   Select,
   Textarea,
 } from 'react-drip-form-components';
+
+export default dripForm({/* form options */})(({ handlers }) => (
+  <form onSubmit={handlers.onSubmit}>
+    {/* Input field */}
+    <Input name="username" type="text" />
+
+    {/* Select field */}
+    <Select name="color">
+      <option value="#fff">White</option>
+      <option value="#ccc">Gray</option>
+      <option value="#000">Black</option>
+    </Select>
+
+    {/* Checkbox with FieldGroup field */}
+    <FieldGroup name="library" multiple>
+      <Checkbox value="react">React</Checkbox>
+      <Checkbox value="angular">Angular</Checkbox>
+      <Checkbox value="vue">Vue</Checkbox>
+    </FieldGroup>
+
+    {/* Radio with FieldGroup field */}
+    <FieldGroup name="gender">
+      <Radio name="female">Female</Radio>
+      <Radio name="male">Male</Radio>
+      <Radio name="other">Other</Radio>
+    </FieldGroup>
+
+    {/* Textarea field */}
+    <Textarea name="message" />
+
+    {/* Checkbox only */}
+    <Checkbox name="confirm" value="yes">
+      I agree to the <a href="/foo/bar/">Terms of Use</a>
+    </Checkbox>
+
+    <button type="submit" onClick={handlers.onSubmit}>Submit</button>
+  </form>
+));
 ```
+
+For actual use, [demo/components/SampleForm.js](./demo/components/SampleForm.js) source code may be helpful!
 
 
 
@@ -109,11 +160,12 @@ It is a component that wraps `type="checkbox"` with `dripFormField()`.
 
 It is a component that wraps `input` with `dripFormField()`. mainly used for text control.
 
-| key                    | description                                        |
-|:-----------------------|:---------------------------------------------------|
-| `disabled`             | Specify whether the field is disabled.             |
-| `shouldDisplayError`   | ref: [shouldDisplayError](#shoulddisplayerror)     |
-| `shouldDisplaySpinner` | ref: [shouldDisplaySpinner](#shoulddisplayspinner) |
+| key                    | description                                                                        |
+|:-----------------------|:-----------------------------------------------------------------------------------|
+| `type`                 | Specify an InputType other than `checkbox` and` radio`. (`Text` or `email` etc...) |
+| `disabled`             | Specify whether the field is disabled.                                             |
+| `shouldDisplayError`   | ref: [shouldDisplayError](#shoulddisplayerror)                                     |
+| `shouldDisplaySpinner` | ref: [shouldDisplaySpinner](#shoulddisplayspinner)                                 |
 
 
 ### Radio
@@ -162,9 +214,35 @@ It is a component wrapped in `dripFormGroup()`.
 | `shouldDisplayError` | ref: [shouldDisplayError](#shoulddisplayerror) |
 
 
+
+
 ## Customize Theme
 
-todo
+You can customize the theme by using `extendTheme` as follows.
+
+```javascript
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { extendTheme } from 'react-drip-form-components';
+
+const originalTheme = {
+  /* ... Your theme variables */
+
+  // The `rdf` namespace is the theme of `react-drip-form`.
+  rdf: extendTheme({
+    /* Specify a custom theme here */
+  }),
+};
+
+export default () => (
+  <ThemeProvider theme={originalTheme}>
+    {/* Here is your components. */}
+  </ThemeProvider>
+);
+```
+
+See [src/theme.js](./src/theme.js) for customizable variables.
+
 
 
 
