@@ -102,7 +102,7 @@ const SampleForm = ({ handlers }) => (
 
     <div>
       <label>Radio (disabled)</label>
-      <FieldGroup name="radio">
+      <FieldGroup name="_radio">
         <Radio value="yes" disabled>Yes</Radio>
         <Radio value="no" disabled>No</Radio>
       </FieldGroup>
