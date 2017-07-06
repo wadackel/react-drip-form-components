@@ -13,7 +13,7 @@ const TextControl = styled.input`
   border-style: solid;
   border-width: ${bind('borderWidth')};
   border-color: ${props => props.error
-    ? get(props, 'error')
+    ? get(props, 'borderColorError')
     : get(props, 'borderColor')};
   border-radius: ${bind('borderRadius')};
   box-shadow: ${bind('boxShadow')};

@@ -11,12 +11,13 @@ export const FieldGroup = (props) => {
     children,
     shouldDisplayError,
     meta,
+    ...rest
   } = props;
 
   const displayError = shouldDisplayError(props);
 
   return (
-    <Field>
+    <Field {...rest}>
       {children}
 
       {displayError &&

@@ -2,18 +2,9 @@ import React from 'react';
 import { dripFormField, FieldPropTypes } from 'react-drip-form';
 import ErrorLabel from './internal/ErrorLabel';
 import Spinner from './internal/Spinner';
-import TextControl from './internal/TextControl';
+import TextareaControl from './internal/TextareaControl';
 import Field from './internal/Field';
 import defaultProps from './internal/defaultFieldProps';
-
-
-const Control = TextControl.withComponent('textarea');
-
-const TextareaControl = Control.extend`
-  height: 6em;
-  padding: 0.7em;
-  resize: vertical;
-`;
 
 
 export const Textarea = (props) => {

@@ -65,6 +65,7 @@
     "eslint-plugin-react": "^7.1.0",
     "gh-pages": "^1.0.0",
     "jest": "^20.0.4",
+    "jest-styled-components": "^3.1.5",
     "react": "^15.6.1",
     "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.6.1",
