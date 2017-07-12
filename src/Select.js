@@ -10,13 +10,11 @@ import defaultProps from './internal/defaultFieldProps';
 export const Select = (props) => {
   const {
     input,
-    props: {
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      children,
-      ...rest
-    },
     meta,
+    shouldDisplayError,
+    shouldDisplaySpinner,
+    children,
+    ...rest
   } = props;
 
   const displayError = shouldDisplayError(props);

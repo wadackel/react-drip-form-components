@@ -34,11 +34,10 @@ describe('<Input />', () => {
     const wrapper = shallow(<Input {...props} />);
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      ...rest
     } = props;
 
     expect(wrapper.equals(
@@ -58,11 +57,10 @@ describe('<Input />', () => {
     const wrapper = shallow(<Input {...props} />);
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      ...rest
     } = props;
 
     expect(wrapper.equals(
@@ -91,11 +89,10 @@ describe('<Input />', () => {
 
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      ...rest
     } = props;
 
     expect(wrapper.equals(
@@ -125,11 +122,10 @@ describe('<Input />', () => {
 
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      ...rest
     } = props;
 
     expect(wrapper.equals(

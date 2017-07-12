@@ -16,9 +16,7 @@ const SelectField = Field.extend`
     border-top: 0;
     transform: rotate(-45deg);
     pointer-events: none;
-    content: ${props => props.showSpinner
-      ? 'none'
-      : '""'};
+    content: ${props => props.showSpinner ? 'none' : '""'};
   }
 `;
 

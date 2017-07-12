@@ -38,12 +38,11 @@ describe('<Radio />', () => {
 
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        children,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      children,
+      ...rest
     } = props;
 
     expect(wrapper.equals(
@@ -71,12 +70,11 @@ describe('<Radio />', () => {
 
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        children,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      children,
+      ...rest
     } = props;
 
     expect(wrapper.equals(
@@ -108,12 +106,11 @@ describe('<Radio />', () => {
 
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        children,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      children,
+      ...rest
     } = props;
 
     expect(wrapper.equals(

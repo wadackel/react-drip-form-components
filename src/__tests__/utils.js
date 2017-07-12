@@ -21,6 +21,9 @@ export const mountWithTheme = (element, extend) => (
 );
 
 export const mockFieldProps = (input = {}, meta = {}, props = {}) => ({
+  shouldDisplayError: () => false,
+  shouldDisplaySpinner: () => false,
+  ...props,
   input: {
     value: '',
     onChange: () => {},
@@ -39,11 +42,6 @@ export const mockFieldProps = (input = {}, meta = {}, props = {}) => ({
     pristine: false,
     validating: false,
     ...meta,
-  },
-  props: {
-    shouldDisplayError: () => false,
-    shouldDisplaySpinner: () => false,
-    ...props,
   },
 });
 

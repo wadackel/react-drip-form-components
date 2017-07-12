@@ -12,13 +12,11 @@ import defaultProps from './internal/defaultFieldProps';
 export const Radio = (props) => {
   const {
     input,
-    props: {
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      children,
-      ...rest
-    },
     meta,
+    shouldDisplayError,
+    shouldDisplaySpinner,
+    children,
+    ...rest
   } = props;
 
   const id = getPropId(props);

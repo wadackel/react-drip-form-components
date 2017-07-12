@@ -38,12 +38,11 @@ describe('<Select />', () => {
 
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        children,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      children,
+      ...rest
     } = props;
 
     expect(wrapper.equals(
@@ -70,11 +69,10 @@ describe('<Select />', () => {
 
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      ...rest
     } = props;
 
     expect(wrapper.equals(
@@ -101,11 +99,10 @@ describe('<Select />', () => {
 
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      ...rest
     } = props;
 
     expect(wrapper.equals(
@@ -130,11 +127,10 @@ describe('<Select />', () => {
 
     const {
       input,
-      props: {
-        shouldDisplayError,
-        shouldDisplaySpinner,
-        ...rest
-      },
+      meta,
+      shouldDisplayError,
+      shouldDisplaySpinner,
+      ...rest
     } = props;
 
     expect(wrapper.equals(

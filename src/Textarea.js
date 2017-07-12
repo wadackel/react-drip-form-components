@@ -10,12 +10,10 @@ import defaultProps from './internal/defaultFieldProps';
 export const Textarea = (props) => {
   const {
     input,
-    props: {
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    },
     meta,
+    shouldDisplayError,
+    shouldDisplaySpinner,
+    ...rest
   } = props;
 
   const displayError = shouldDisplayError(props);

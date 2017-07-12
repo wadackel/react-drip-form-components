@@ -12,9 +12,7 @@ const TextControl = styled.input`
   background: ${bind('background')};
   border-style: solid;
   border-width: ${bind('borderWidth')};
-  border-color: ${props => props.error
-    ? get(props, 'borderColorError')
-    : get(props, 'borderColor')};
+  border-color: ${props => props.error ? get(props, 'borderColorError') : get(props, 'borderColor')};
   border-radius: ${bind('borderRadius')};
   box-shadow: ${bind('boxShadow')};
   color: ${bind('color')};
@@ -27,23 +25,14 @@ const TextControl = styled.input`
   transition-timing-function: ${bind('transitionTimingFunction')};
 
   &:not(:disabled):hover {
-    background: ${props => props.error
-      ? get(props, 'backgroundError')
-      : get(props, 'backgroundEnter')};
-    border-color: ${props => props.error
-      ? get(props, 'borderColorError')
-      : get(props, 'borderColorEnter')};
-    };
+    background: ${props => props.error ? get(props, 'backgroundError') : get(props, 'backgroundEnter')};
+    border-color: ${props => props.error ? get(props, 'borderColorError') : get(props, 'borderColorEnter')};
   }
 
   &:not(:disabled):focus {
     outline: none;
-    background: ${props => props.error
-      ? get(props, 'backgroundError')
-      : get(props, 'backgroundFocus')};
-    border-color: ${props => props.error
-      ? get(props, 'borderColorError')
-      : get(props, 'borderColorFocus')};
+    background: ${props => props.error ? get(props, 'backgroundError') : get(props, 'backgroundFocus')};
+    border-color: ${props => props.error ? get(props, 'borderColorError') : get(props, 'borderColorFocus')};
     box-shadow: ${bind('boxShadowEnter')};
   }
 
