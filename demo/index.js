@@ -1,4 +1,6 @@
-import { AppContainer } from 'react-hot-loader'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable global-require */
+/* eslint-disable import/no-extraneous-dependencies */
+import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
@@ -16,5 +18,8 @@ const render = (Component) => {
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./components/App', () => render(App));
+  module.hot.accept('./components/App', () => {
+    const NextApp = require('./components/App').default;
+    render(NextApp);
+  });
 }
