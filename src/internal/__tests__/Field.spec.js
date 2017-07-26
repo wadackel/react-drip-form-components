@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
-import { theme } from '../../theme';
 import Field from '../Field';
 import { mountWithTheme } from '../../__tests__/utils';
 
@@ -21,8 +20,7 @@ describe('Internal#<Field />', () => {
 
   test('Should be styled component', () => {
     const wrapper = shallow(<Field />);
-    expect(wrapper).toHaveStyleRule('margin', '0');
-    expect(wrapper).toHaveStyleRule('font-size', theme.fontSize);
+    expect(wrapper).toMatchSnapshot();
   });
 
 

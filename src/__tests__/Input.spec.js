@@ -32,23 +32,8 @@ describe('<Input />', () => {
   test('Should be render control', () => {
     const props = mockFieldProps();
     const wrapper = shallow(<Input {...props} />);
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
 
-    expect(wrapper.equals(
-      <Field>
-        <TextControl
-          {...rest}
-          {...input}
-          error={false}
-        />
-      </Field>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 

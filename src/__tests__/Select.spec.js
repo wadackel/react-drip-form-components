@@ -2,10 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { mockFieldProps } from './utils';
 import { Select } from '../Select';
-import SelectField from '../internal/SelectField';
-import SelectControl from '../internal/SelectControl';
-import ErrorLabel from '../internal/ErrorLabel';
-import Spinner from '../internal/Spinner';
 
 
 describe('<Select />', () => {
@@ -38,26 +34,7 @@ describe('<Select />', () => {
       </Select>
     );
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      children,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SelectField showSpinner={false}>
-        <SelectControl
-          {...rest}
-          {...input}
-          error={false}
-        >
-          select field
-        </SelectControl>
-      </SelectField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -68,24 +45,7 @@ describe('<Select />', () => {
 
     const wrapper = shallow(<Select {...props} />);
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SelectField showSpinner={false}>
-        <SelectControl
-          {...rest}
-          {...input}
-          disabled
-          error={false}
-        />
-      </SelectField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -99,24 +59,7 @@ describe('<Select />', () => {
 
     const wrapper = shallow(<Select {...props} />);
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SelectField showSpinner={false}>
-        <SelectControl
-          {...rest}
-          {...input}
-          error
-        />
-        <ErrorLabel>error!!</ErrorLabel>
-      </SelectField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -127,23 +70,6 @@ describe('<Select />', () => {
 
     const wrapper = shallow(<Select {...props} />);
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SelectField showSpinner>
-        <SelectControl
-          {...rest}
-          {...input}
-          error={false}
-        />
-        <Spinner />
-      </SelectField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 });

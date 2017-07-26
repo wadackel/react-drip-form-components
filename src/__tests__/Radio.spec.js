@@ -2,10 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { mockFieldProps } from './utils';
 import { Radio } from '../Radio';
-import SwitchField from '../internal/SwitchField';
-import SwitchControl from '../internal/SwitchControl';
-import Label from '../internal/Label';
-import ErrorLabel from '../internal/ErrorLabel';
 
 
 describe('<Radio />', () => {
@@ -38,27 +34,7 @@ describe('<Radio />', () => {
       </Radio>
     );
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      children,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SwitchField disabled={rest.disabled}>
-        <Label htmlFor={null}>
-          <SwitchControl
-            {...rest}
-            {...input}
-            type="radio"
-          />
-          <span>foo</span>
-        </Label>
-      </SwitchField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -73,28 +49,7 @@ describe('<Radio />', () => {
       </Radio>
     );
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      children,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SwitchField disabled={rest.disabled}>
-        <Label htmlFor={null}>
-          <SwitchControl
-            {...rest}
-            {...input}
-            disabled
-            type="radio"
-          />
-          <span>bar</span>
-        </Label>
-      </SwitchField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -113,28 +68,6 @@ describe('<Radio />', () => {
       </Radio>
     );
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      children,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SwitchField disabled={rest.disabled}>
-        <Label htmlFor={null}>
-          <SwitchControl
-            {...rest}
-            {...input}
-            disabled
-            type="radio"
-          />
-          <span>bar</span>
-        </Label>
-        <ErrorLabel>error text</ErrorLabel>
-      </SwitchField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 });

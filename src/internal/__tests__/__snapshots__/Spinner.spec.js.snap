@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Internal#<Spinner /> Should be styled component 1`] = `
+.c0 {
+  display: block;
+  position: absolute;
+  top: 0.8em;
+  right: 0.8em;
+  margin: 0;
+  width: 1em;
+  height: 1em;
+  border: 1px solid rgb(0,188,212);
+  border-top-width: 0;
+  border-radius: 50%;
+  -webkit-animation: iVXCSc 500ms infinite linear;
+  animation: iVXCSc 500ms infinite linear;
+  -webkit-transform-origin: 50% 49%;
+  -ms-transform-origin: 50% 49%;
+  transform-origin: 50% 49%;
+}
+
+<div
+  className="c0"
+/>
+`;

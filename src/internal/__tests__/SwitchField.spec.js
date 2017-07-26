@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
-import { theme } from '../../theme';
 import SwitchField from '../SwitchField';
 import { mountWithTheme } from '../../__tests__/utils';
 
@@ -21,10 +20,10 @@ describe('Internal#<SwitchField />', () => {
 
   test('Should be styled component', () => {
     const wrapper = shallow(<SwitchField />);
-    expect(wrapper).toHaveStyleRule('color', theme.color);
+    expect(wrapper).toMatchSnapshot();
 
     wrapper.setProps({ disabled: true });
-    expect(wrapper).toHaveStyleRule('color', theme.disabled);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -37,9 +36,9 @@ describe('Internal#<SwitchField />', () => {
     let wrapper;
 
     wrapper = mountWithTheme(<SwitchField />, testTheme);
-    expect(wrapper).toHaveStyleRule('color', 'hotpink');
+    expect(wrapper).toMatchSnapshot();
 
     wrapper = mountWithTheme(<SwitchField disabled />, testTheme);
-    expect(wrapper).toHaveStyleRule('color', 'green');
+    expect(wrapper).toMatchSnapshot();
   });
 });
