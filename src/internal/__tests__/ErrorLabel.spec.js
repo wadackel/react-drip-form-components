@@ -22,7 +22,7 @@ describe('Internal#<ErrorLabel />', () => {
   test('Should be styled component', () => {
     const wrapper = shallow(<ErrorLabel />);
     expect(wrapper).toHaveStyleRule('font-size', '0.85rem');
-    expect(wrapper).toHaveStyleRule('color', theme.error);
+    expect(wrapper).toHaveStyleRule('color', theme.error.replace(/\s/g, ''));
   });
 
 

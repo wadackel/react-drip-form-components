@@ -2,17 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { mockFieldProps } from './utils';
 import { Select } from '../Select';
-import SelectField from '../internal/SelectField';
-import SelectControl from '../internal/SelectControl';
-import ErrorLabel from '../internal/ErrorLabel';
-import Spinner from '../internal/Spinner';
 
 
 describe('<Select />', () => {
   test('Should be pass function props', () => {
     const shouldDisplayError = jest.fn();
     const shouldDisplaySpinner = jest.fn();
-    const props = mockFieldProps({}, {}, {
+    const props = mockFieldProps({
       shouldDisplayError,
       shouldDisplaySpinner,
     });
@@ -30,118 +26,50 @@ describe('<Select />', () => {
 
 
   test('Should be render control', () => {
-    const props = mockFieldProps({}, {}, {
-      children: 'select field',
-    });
+    const props = mockFieldProps();
 
-    const wrapper = shallow(<Select {...props} />);
+    const wrapper = shallow(
+      <Select {...props}>
+        select field
+      </Select>
+    );
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      children,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SelectField showSpinner={false}>
-        <SelectControl
-          {...rest}
-          {...input}
-          error={false}
-        >
-          select field
-        </SelectControl>
-      </SelectField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
   test('Should be render disabled control', () => {
-    const props = mockFieldProps({}, {}, {
-      children: 'disabled select',
+    const props = mockFieldProps({
       disabled: true,
     });
 
     const wrapper = shallow(<Select {...props} />);
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SelectField showSpinner={false}>
-        <SelectControl
-          {...rest}
-          {...input}
-          disabled
-          error={false}
-        />
-      </SelectField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
   test('Should be render error text', () => {
-    const props = mockFieldProps({}, {
-      error: 'error!!',
-    }, {
+    const props = mockFieldProps({
       shouldDisplayError: () => true,
+      meta: {
+        error: 'error!!',
+      },
     });
 
     const wrapper = shallow(<Select {...props} />);
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SelectField showSpinner={false}>
-        <SelectControl
-          {...rest}
-          {...input}
-          error
-        />
-        <ErrorLabel>error!!</ErrorLabel>
-      </SelectField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
   test('Should be render spinner', () => {
-    const props = mockFieldProps({}, {}, {
+    const props = mockFieldProps({
       shouldDisplaySpinner: () => true,
     });
 
     const wrapper = shallow(<Select {...props} />);
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <SelectField showSpinner>
-        <SelectControl
-          {...rest}
-          {...input}
-          error={false}
-        />
-        <Spinner />
-      </SelectField>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 });

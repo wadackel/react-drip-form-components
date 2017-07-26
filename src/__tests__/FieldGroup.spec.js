@@ -2,14 +2,12 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { mockGroupProps } from './utils';
 import { FieldGroup } from '../FieldGroup';
-import Field from '../internal/Field';
-import ErrorLabel from '../internal/ErrorLabel';
 
 
 describe('<FieldGroup />', () => {
   test('Should be pass function props', () => {
     const shouldDisplayError = jest.fn();
-    const props = mockGroupProps({}, {
+    const props = mockGroupProps({
       shouldDisplayError,
     });
 
@@ -35,30 +33,16 @@ describe('<FieldGroup />', () => {
       </FieldGroup>
     );
 
-    const {
-      meta,
-      shouldDisplayError,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <Field
-        {...rest}
-        id="foo"
-        data-foo="bar"
-        role="group"
-      >
-        props
-      </Field>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
   test('Should be render error text', () => {
     const props = mockGroupProps({
-      error: 'error label',
-    }, {
       shouldDisplayError: () => true,
+      meta: {
+        error: 'error label',
+      },
     });
 
     const wrapper = shallow(
@@ -67,17 +51,6 @@ describe('<FieldGroup />', () => {
       </FieldGroup>
     );
 
-    const {
-      meta,
-      shouldDisplayError,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <Field {...rest}>
-        props
-        <ErrorLabel>error label</ErrorLabel>
-      </Field>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 });

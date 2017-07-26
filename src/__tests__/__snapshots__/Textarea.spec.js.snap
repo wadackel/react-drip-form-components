@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Textarea /> Should be render control 1`] = `
+<styled.div
+  theme={
+    Object {
+      "rdf": Object {
+        "background": "rgb(255, 255, 255)",
+        "backgroundDisabled": "rgb(245, 245, 245)",
+        "backgroundEnter": "rgb(255, 255, 255)",
+        "backgroundError": "rgb(255, 255, 255)",
+        "backgroundFocus": "rgb(255, 255, 255)",
+        "borderColor": "rgb(219, 219, 219)",
+        "borderColorDisabled": "rgb(245, 245, 245)",
+        "borderColorEnter": "rgb(204, 204, 204)",
+        "borderColorError": "rgb(245, 0, 87)",
+        "borderColorFocus": "rgb(0, 188, 212)",
+        "borderRadius": "3px",
+        "borderWidth": "1px",
+        "boxShadow": "0 0 0 transparent",
+        "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+        "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+        "color": "rgb(54, 54, 54)",
+        "controlHeight": "2.7em",
+        "disabled": "rgb(204, 204, 204)",
+        "error": "rgb(245, 0, 87)",
+        "fontSize": "1rem",
+        "selectArrowColor": "rgb(0, 188, 212)",
+        "spinnerColor": "rgb(0, 188, 212)",
+        "spinnerDuration": "500ms",
+        "transitionDuration": "110ms",
+        "transitionProperty": "color, box-shadow, border",
+        "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+      },
+    }
+  }
+>
+  <styled.textarea
+    error={false}
+    name="mockField"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    theme={
+      Object {
+        "rdf": Object {
+          "background": "rgb(255, 255, 255)",
+          "backgroundDisabled": "rgb(245, 245, 245)",
+          "backgroundEnter": "rgb(255, 255, 255)",
+          "backgroundError": "rgb(255, 255, 255)",
+          "backgroundFocus": "rgb(255, 255, 255)",
+          "borderColor": "rgb(219, 219, 219)",
+          "borderColorDisabled": "rgb(245, 245, 245)",
+          "borderColorEnter": "rgb(204, 204, 204)",
+          "borderColorError": "rgb(245, 0, 87)",
+          "borderColorFocus": "rgb(0, 188, 212)",
+          "borderRadius": "3px",
+          "borderWidth": "1px",
+          "boxShadow": "0 0 0 transparent",
+          "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "color": "rgb(54, 54, 54)",
+          "controlHeight": "2.7em",
+          "disabled": "rgb(204, 204, 204)",
+          "error": "rgb(245, 0, 87)",
+          "fontSize": "1rem",
+          "selectArrowColor": "rgb(0, 188, 212)",
+          "spinnerColor": "rgb(0, 188, 212)",
+          "spinnerDuration": "500ms",
+          "transitionDuration": "110ms",
+          "transitionProperty": "color, box-shadow, border",
+          "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+        },
+      }
+    }
+    value={null}
+  />
+</styled.div>
+`;
+
+exports[`<Textarea /> Should be render disabled control 1`] = `
+<styled.div
+  theme={
+    Object {
+      "rdf": Object {
+        "background": "rgb(255, 255, 255)",
+        "backgroundDisabled": "rgb(245, 245, 245)",
+        "backgroundEnter": "rgb(255, 255, 255)",
+        "backgroundError": "rgb(255, 255, 255)",
+        "backgroundFocus": "rgb(255, 255, 255)",
+        "borderColor": "rgb(219, 219, 219)",
+        "borderColorDisabled": "rgb(245, 245, 245)",
+        "borderColorEnter": "rgb(204, 204, 204)",
+        "borderColorError": "rgb(245, 0, 87)",
+        "borderColorFocus": "rgb(0, 188, 212)",
+        "borderRadius": "3px",
+        "borderWidth": "1px",
+        "boxShadow": "0 0 0 transparent",
+        "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+        "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+        "color": "rgb(54, 54, 54)",
+        "controlHeight": "2.7em",
+        "disabled": "rgb(204, 204, 204)",
+        "error": "rgb(245, 0, 87)",
+        "fontSize": "1rem",
+        "selectArrowColor": "rgb(0, 188, 212)",
+        "spinnerColor": "rgb(0, 188, 212)",
+        "spinnerDuration": "500ms",
+        "transitionDuration": "110ms",
+        "transitionProperty": "color, box-shadow, border",
+        "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+      },
+    }
+  }
+>
+  <styled.textarea
+    disabled={true}
+    error={false}
+    name="mockField"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    theme={
+      Object {
+        "rdf": Object {
+          "background": "rgb(255, 255, 255)",
+          "backgroundDisabled": "rgb(245, 245, 245)",
+          "backgroundEnter": "rgb(255, 255, 255)",
+          "backgroundError": "rgb(255, 255, 255)",
+          "backgroundFocus": "rgb(255, 255, 255)",
+          "borderColor": "rgb(219, 219, 219)",
+          "borderColorDisabled": "rgb(245, 245, 245)",
+          "borderColorEnter": "rgb(204, 204, 204)",
+          "borderColorError": "rgb(245, 0, 87)",
+          "borderColorFocus": "rgb(0, 188, 212)",
+          "borderRadius": "3px",
+          "borderWidth": "1px",
+          "boxShadow": "0 0 0 transparent",
+          "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "color": "rgb(54, 54, 54)",
+          "controlHeight": "2.7em",
+          "disabled": "rgb(204, 204, 204)",
+          "error": "rgb(245, 0, 87)",
+          "fontSize": "1rem",
+          "selectArrowColor": "rgb(0, 188, 212)",
+          "spinnerColor": "rgb(0, 188, 212)",
+          "spinnerDuration": "500ms",
+          "transitionDuration": "110ms",
+          "transitionProperty": "color, box-shadow, border",
+          "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+        },
+      }
+    }
+    value={null}
+  />
+</styled.div>
+`;
+
+exports[`<Textarea /> Should be render error text 1`] = `
+<styled.div
+  theme={
+    Object {
+      "rdf": Object {
+        "background": "rgb(255, 255, 255)",
+        "backgroundDisabled": "rgb(245, 245, 245)",
+        "backgroundEnter": "rgb(255, 255, 255)",
+        "backgroundError": "rgb(255, 255, 255)",
+        "backgroundFocus": "rgb(255, 255, 255)",
+        "borderColor": "rgb(219, 219, 219)",
+        "borderColorDisabled": "rgb(245, 245, 245)",
+        "borderColorEnter": "rgb(204, 204, 204)",
+        "borderColorError": "rgb(245, 0, 87)",
+        "borderColorFocus": "rgb(0, 188, 212)",
+        "borderRadius": "3px",
+        "borderWidth": "1px",
+        "boxShadow": "0 0 0 transparent",
+        "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+        "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+        "color": "rgb(54, 54, 54)",
+        "controlHeight": "2.7em",
+        "disabled": "rgb(204, 204, 204)",
+        "error": "rgb(245, 0, 87)",
+        "fontSize": "1rem",
+        "selectArrowColor": "rgb(0, 188, 212)",
+        "spinnerColor": "rgb(0, 188, 212)",
+        "spinnerDuration": "500ms",
+        "transitionDuration": "110ms",
+        "transitionProperty": "color, box-shadow, border",
+        "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+      },
+    }
+  }
+>
+  <styled.textarea
+    error={true}
+    name="mockField"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    theme={
+      Object {
+        "rdf": Object {
+          "background": "rgb(255, 255, 255)",
+          "backgroundDisabled": "rgb(245, 245, 245)",
+          "backgroundEnter": "rgb(255, 255, 255)",
+          "backgroundError": "rgb(255, 255, 255)",
+          "backgroundFocus": "rgb(255, 255, 255)",
+          "borderColor": "rgb(219, 219, 219)",
+          "borderColorDisabled": "rgb(245, 245, 245)",
+          "borderColorEnter": "rgb(204, 204, 204)",
+          "borderColorError": "rgb(245, 0, 87)",
+          "borderColorFocus": "rgb(0, 188, 212)",
+          "borderRadius": "3px",
+          "borderWidth": "1px",
+          "boxShadow": "0 0 0 transparent",
+          "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "color": "rgb(54, 54, 54)",
+          "controlHeight": "2.7em",
+          "disabled": "rgb(204, 204, 204)",
+          "error": "rgb(245, 0, 87)",
+          "fontSize": "1rem",
+          "selectArrowColor": "rgb(0, 188, 212)",
+          "spinnerColor": "rgb(0, 188, 212)",
+          "spinnerDuration": "500ms",
+          "transitionDuration": "110ms",
+          "transitionProperty": "color, box-shadow, border",
+          "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+        },
+      }
+    }
+    value={null}
+  />
+  <styled.div
+    theme={
+      Object {
+        "rdf": Object {
+          "background": "rgb(255, 255, 255)",
+          "backgroundDisabled": "rgb(245, 245, 245)",
+          "backgroundEnter": "rgb(255, 255, 255)",
+          "backgroundError": "rgb(255, 255, 255)",
+          "backgroundFocus": "rgb(255, 255, 255)",
+          "borderColor": "rgb(219, 219, 219)",
+          "borderColorDisabled": "rgb(245, 245, 245)",
+          "borderColorEnter": "rgb(204, 204, 204)",
+          "borderColorError": "rgb(245, 0, 87)",
+          "borderColorFocus": "rgb(0, 188, 212)",
+          "borderRadius": "3px",
+          "borderWidth": "1px",
+          "boxShadow": "0 0 0 transparent",
+          "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "color": "rgb(54, 54, 54)",
+          "controlHeight": "2.7em",
+          "disabled": "rgb(204, 204, 204)",
+          "error": "rgb(245, 0, 87)",
+          "fontSize": "1rem",
+          "selectArrowColor": "rgb(0, 188, 212)",
+          "spinnerColor": "rgb(0, 188, 212)",
+          "spinnerDuration": "500ms",
+          "transitionDuration": "110ms",
+          "transitionProperty": "color, box-shadow, border",
+          "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+        },
+      }
+    }
+  >
+    foo
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Textarea /> Should be render spinner 1`] = `
+<styled.div
+  theme={
+    Object {
+      "rdf": Object {
+        "background": "rgb(255, 255, 255)",
+        "backgroundDisabled": "rgb(245, 245, 245)",
+        "backgroundEnter": "rgb(255, 255, 255)",
+        "backgroundError": "rgb(255, 255, 255)",
+        "backgroundFocus": "rgb(255, 255, 255)",
+        "borderColor": "rgb(219, 219, 219)",
+        "borderColorDisabled": "rgb(245, 245, 245)",
+        "borderColorEnter": "rgb(204, 204, 204)",
+        "borderColorError": "rgb(245, 0, 87)",
+        "borderColorFocus": "rgb(0, 188, 212)",
+        "borderRadius": "3px",
+        "borderWidth": "1px",
+        "boxShadow": "0 0 0 transparent",
+        "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+        "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+        "color": "rgb(54, 54, 54)",
+        "controlHeight": "2.7em",
+        "disabled": "rgb(204, 204, 204)",
+        "error": "rgb(245, 0, 87)",
+        "fontSize": "1rem",
+        "selectArrowColor": "rgb(0, 188, 212)",
+        "spinnerColor": "rgb(0, 188, 212)",
+        "spinnerDuration": "500ms",
+        "transitionDuration": "110ms",
+        "transitionProperty": "color, box-shadow, border",
+        "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+      },
+    }
+  }
+>
+  <styled.textarea
+    error={false}
+    name="mockField"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    theme={
+      Object {
+        "rdf": Object {
+          "background": "rgb(255, 255, 255)",
+          "backgroundDisabled": "rgb(245, 245, 245)",
+          "backgroundEnter": "rgb(255, 255, 255)",
+          "backgroundError": "rgb(255, 255, 255)",
+          "backgroundFocus": "rgb(255, 255, 255)",
+          "borderColor": "rgb(219, 219, 219)",
+          "borderColorDisabled": "rgb(245, 245, 245)",
+          "borderColorEnter": "rgb(204, 204, 204)",
+          "borderColorError": "rgb(245, 0, 87)",
+          "borderColorFocus": "rgb(0, 188, 212)",
+          "borderRadius": "3px",
+          "borderWidth": "1px",
+          "boxShadow": "0 0 0 transparent",
+          "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "color": "rgb(54, 54, 54)",
+          "controlHeight": "2.7em",
+          "disabled": "rgb(204, 204, 204)",
+          "error": "rgb(245, 0, 87)",
+          "fontSize": "1rem",
+          "selectArrowColor": "rgb(0, 188, 212)",
+          "spinnerColor": "rgb(0, 188, 212)",
+          "spinnerDuration": "500ms",
+          "transitionDuration": "110ms",
+          "transitionProperty": "color, box-shadow, border",
+          "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+        },
+      }
+    }
+    value={null}
+  />
+  <styled.div
+    theme={
+      Object {
+        "rdf": Object {
+          "background": "rgb(255, 255, 255)",
+          "backgroundDisabled": "rgb(245, 245, 245)",
+          "backgroundEnter": "rgb(255, 255, 255)",
+          "backgroundError": "rgb(255, 255, 255)",
+          "backgroundFocus": "rgb(255, 255, 255)",
+          "borderColor": "rgb(219, 219, 219)",
+          "borderColorDisabled": "rgb(245, 245, 245)",
+          "borderColorEnter": "rgb(204, 204, 204)",
+          "borderColorError": "rgb(245, 0, 87)",
+          "borderColorFocus": "rgb(0, 188, 212)",
+          "borderRadius": "3px",
+          "borderWidth": "1px",
+          "boxShadow": "0 0 0 transparent",
+          "boxShadowDisabled": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "boxShadowEnter": "0 2px 2px rgba(0, 0, 0, 0.04) inset",
+          "color": "rgb(54, 54, 54)",
+          "controlHeight": "2.7em",
+          "disabled": "rgb(204, 204, 204)",
+          "error": "rgb(245, 0, 87)",
+          "fontSize": "1rem",
+          "selectArrowColor": "rgb(0, 188, 212)",
+          "spinnerColor": "rgb(0, 188, 212)",
+          "spinnerDuration": "500ms",
+          "transitionDuration": "110ms",
+          "transitionProperty": "color, box-shadow, border",
+          "transitionTimingFunction": "cubic-bezier(.25, .46, .45, .94)",
+        },
+      }
+    }
+  />
+</styled.div>
+`;

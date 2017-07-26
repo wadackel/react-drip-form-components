@@ -15,7 +15,7 @@ const Spinner = styled.div`
   display: block;
   position: absolute;
   top: 0.8em;
-  right: 0.5em;
+  right: 0.8em;
   margin: 0;
   width: 1em;
   height: 1em;

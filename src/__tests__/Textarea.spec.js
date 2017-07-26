@@ -2,17 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { mockFieldProps } from './utils';
 import { Textarea } from '../Textarea';
-import Field from '../internal/Field';
-import TextareaControl from '../internal/TextareaControl';
-import ErrorLabel from '../internal/ErrorLabel';
-import Spinner from '../internal/Spinner';
 
 
 describe('<Textarea />', () => {
   test('Should be pass function props', () => {
     const shouldDisplayError = jest.fn();
     const shouldDisplaySpinner = jest.fn();
-    const props = mockFieldProps({}, {}, {
+    const props = mockFieldProps({
       shouldDisplayError,
       shouldDisplaySpinner,
     });
@@ -32,112 +28,40 @@ describe('<Textarea />', () => {
   test('Should be render control', () => {
     const props = mockFieldProps();
     const wrapper = shallow(<Textarea {...props} />);
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
 
-    expect(wrapper.equals(
-      <Field>
-        <TextareaControl
-          {...rest}
-          {...input}
-          error={false}
-        />
-      </Field>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
   test('Should be render disabled control', () => {
-    const props = mockFieldProps({}, {}, { disabled: true });
+    const props = mockFieldProps({ disabled: true });
     const wrapper = shallow(<Textarea {...props} />);
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
 
-    expect(wrapper.equals(
-      <Field>
-        <TextareaControl
-          {...rest}
-          {...input}
-          disabled
-          error={false}
-        />
-      </Field>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
   test('Should be render error text', () => {
-    const props = mockFieldProps(
-      {},
-      { error: 'foo' },
-      {
-        shouldDisplayError: () => true,
-      }
-    );
+    const props = mockFieldProps({
+      shouldDisplayError: () => true,
+      meta: {
+        error: 'foo',
+      },
+    });
 
     const wrapper = shallow(<Textarea {...props} />);
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <Field>
-        <TextareaControl
-          {...rest}
-          {...input}
-          error
-        />
-
-        <ErrorLabel>foo</ErrorLabel>
-      </Field>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
 
   test('Should be render spinner', () => {
-    const props = mockFieldProps(
-      {},
-      {},
-      {
-        shouldDisplaySpinner: () => true,
-      }
-    );
+    const props = mockFieldProps({
+      shouldDisplaySpinner: () => true,
+    });
 
     const wrapper = shallow(<Textarea {...props} />);
 
-    const {
-      input,
-      meta,
-      shouldDisplayError,
-      shouldDisplaySpinner,
-      ...rest
-    } = props;
-
-    expect(wrapper.equals(
-      <Field>
-        <TextareaControl
-          {...rest}
-          {...input}
-          error={false}
-        />
-
-        <Spinner />
-      </Field>
-    )).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 });
