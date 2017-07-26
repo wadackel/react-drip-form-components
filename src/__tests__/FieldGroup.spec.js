@@ -9,7 +9,7 @@ import ErrorLabel from '../internal/ErrorLabel';
 describe('<FieldGroup />', () => {
   test('Should be pass function props', () => {
     const shouldDisplayError = jest.fn();
-    const props = mockGroupProps({}, {
+    const props = mockGroupProps({
       shouldDisplayError,
     });
 
@@ -56,9 +56,10 @@ describe('<FieldGroup />', () => {
 
   test('Should be render error text', () => {
     const props = mockGroupProps({
-      error: 'error label',
-    }, {
       shouldDisplayError: () => true,
+      meta: {
+        error: 'error label',
+      },
     });
 
     const wrapper = shallow(

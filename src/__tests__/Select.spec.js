@@ -12,7 +12,7 @@ describe('<Select />', () => {
   test('Should be pass function props', () => {
     const shouldDisplayError = jest.fn();
     const shouldDisplaySpinner = jest.fn();
-    const props = mockFieldProps({}, {}, {
+    const props = mockFieldProps({
       shouldDisplayError,
       shouldDisplaySpinner,
     });
@@ -30,11 +30,13 @@ describe('<Select />', () => {
 
 
   test('Should be render control', () => {
-    const props = mockFieldProps({}, {}, {
-      children: 'select field',
-    });
+    const props = mockFieldProps();
 
-    const wrapper = shallow(<Select {...props} />);
+    const wrapper = shallow(
+      <Select {...props}>
+        select field
+      </Select>
+    );
 
     const {
       input,
@@ -60,8 +62,7 @@ describe('<Select />', () => {
 
 
   test('Should be render disabled control', () => {
-    const props = mockFieldProps({}, {}, {
-      children: 'disabled select',
+    const props = mockFieldProps({
       disabled: true,
     });
 
@@ -89,10 +90,11 @@ describe('<Select />', () => {
 
 
   test('Should be render error text', () => {
-    const props = mockFieldProps({}, {
-      error: 'error!!',
-    }, {
+    const props = mockFieldProps({
       shouldDisplayError: () => true,
+      meta: {
+        error: 'error!!',
+      },
     });
 
     const wrapper = shallow(<Select {...props} />);
@@ -119,7 +121,7 @@ describe('<Select />', () => {
 
 
   test('Should be render spinner', () => {
-    const props = mockFieldProps({}, {}, {
+    const props = mockFieldProps({
       shouldDisplaySpinner: () => true,
     });
 

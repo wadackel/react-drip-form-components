@@ -12,7 +12,7 @@ describe('<Input />', () => {
   test('Should be pass function props', () => {
     const shouldDisplayError = jest.fn();
     const shouldDisplaySpinner = jest.fn();
-    const props = mockFieldProps({}, {}, {
+    const props = mockFieldProps({
       shouldDisplayError,
       shouldDisplaySpinner,
     });
@@ -53,7 +53,7 @@ describe('<Input />', () => {
 
 
   test('Should be render disabled control', () => {
-    const props = mockFieldProps({}, {}, { disabled: true });
+    const props = mockFieldProps({ disabled: true });
     const wrapper = shallow(<Input {...props} />);
     const {
       input,
@@ -77,13 +77,12 @@ describe('<Input />', () => {
 
 
   test('Should be render error text', () => {
-    const props = mockFieldProps(
-      {},
-      { error: 'foo' },
-      {
-        shouldDisplayError: () => true,
-      }
-    );
+    const props = mockFieldProps({
+      shouldDisplayError: () => true,
+      meta: {
+        error: 'foo',
+      },
+    });
 
     const wrapper = shallow(<Input {...props} />);
 
@@ -110,13 +109,9 @@ describe('<Input />', () => {
 
 
   test('Should be render spinner', () => {
-    const props = mockFieldProps(
-      {},
-      {},
-      {
-        shouldDisplaySpinner: () => true,
-      }
-    );
+    const props = mockFieldProps({
+      shouldDisplaySpinner: () => true,
+    });
 
     const wrapper = shallow(<Input {...props} />);
 

@@ -12,7 +12,7 @@ describe('<Radio />', () => {
   test('Should be pass function props', () => {
     const shouldDisplayError = jest.fn();
     const shouldDisplaySpinner = jest.fn();
-    const props = mockFieldProps({}, {}, {
+    const props = mockFieldProps({
       shouldDisplayError,
       shouldDisplaySpinner,
     });
@@ -30,11 +30,13 @@ describe('<Radio />', () => {
 
 
   test('Should be render control and label', () => {
-    const props = mockFieldProps({}, {}, {
-      children: 'foo',
-    });
+    const props = mockFieldProps();
 
-    const wrapper = shallow(<Radio {...props} />);
+    const wrapper = shallow(
+      <Radio {...props}>
+        foo
+      </Radio>
+    );
 
     const {
       input,
@@ -61,12 +63,15 @@ describe('<Radio />', () => {
 
 
   test('Should be render disabled control', () => {
-    const props = mockFieldProps({}, {}, {
-      children: 'bar',
+    const props = mockFieldProps({
       disabled: true,
     });
 
-    const wrapper = shallow(<Radio {...props} />);
+    const wrapper = shallow(
+      <Radio {...props}>
+        bar
+      </Radio>
+    );
 
     const {
       input,
@@ -94,15 +99,19 @@ describe('<Radio />', () => {
 
 
   test('Should be render error text', () => {
-    const props = mockFieldProps({}, {
-      error: 'error text',
-    }, {
-      children: 'bar',
+    const props = mockFieldProps({
       disabled: true,
       shouldDisplayError: () => true,
+      meta: {
+        error: 'error text',
+      },
     });
 
-    const wrapper = shallow(<Radio {...props} />);
+    const wrapper = shallow(
+      <Radio {...props}>
+        bar
+      </Radio>
+    );
 
     const {
       input,

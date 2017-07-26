@@ -1,5 +1,9 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import {
+  mockFieldProps as _mockFieldProps,
+  mockGroupProps as _mockGroupProps,
+} from 'react-drip-form-test-utils';
 import { ThemeProvider } from 'styled-components';
 import { extendTheme } from '../theme';
 
@@ -20,46 +24,13 @@ export const mountWithTheme = (element, extend) => (
   )
 );
 
-export const mockFieldProps = (input = {}, meta = {}, props = {}) => ({
+export const mockFieldProps = (props = {}) => _mockFieldProps({
   shouldDisplayError: () => false,
   shouldDisplaySpinner: () => false,
   ...props,
-  input: {
-    value: '',
-    onChange: () => {},
-    onFocus: () => {},
-    onBlur: () => {},
-    ...input,
-  },
-  meta: {
-    error: undefined,
-    errors: undefined,
-    valid: false,
-    invalid: false,
-    touched: false,
-    untouched: false,
-    dirty: false,
-    pristine: false,
-    validating: false,
-    ...meta,
-  },
 });
 
-export const mockGroupProps = (meta = {}, props = {}) => ({
+export const mockGroupProps = (props = {}) => _mockGroupProps({
   shouldDisplayError: () => false,
   ...props,
-  meta: {
-    name: '',
-    label: null,
-    error: undefined,
-    errors: undefined,
-    valid: false,
-    invalid: false,
-    touched: false,
-    untouched: false,
-    dirty: false,
-    pristine: false,
-    validating: false,
-    ...meta,
-  },
 });

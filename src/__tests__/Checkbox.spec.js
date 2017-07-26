@@ -12,7 +12,7 @@ describe('<Checkbox />', () => {
   test('Should be pass function props', () => {
     const shouldDisplayError = jest.fn();
     const shouldDisplaySpinner = jest.fn();
-    const props = mockFieldProps({}, {}, {
+    const props = mockFieldProps({
       shouldDisplayError,
       shouldDisplaySpinner,
     });
@@ -30,11 +30,13 @@ describe('<Checkbox />', () => {
 
 
   test('Should be render control and label', () => {
-    const props = mockFieldProps({}, {}, {
-      children: 'foo',
-    });
+    const props = mockFieldProps();
 
-    const wrapper = shallow(<Checkbox {...props} />);
+    const wrapper = shallow(
+      <Checkbox {...props}>
+        foo
+      </Checkbox>
+    );
 
     const {
       input,
@@ -61,7 +63,7 @@ describe('<Checkbox />', () => {
 
 
   test('Should be render disabled control', () => {
-    const props = mockFieldProps({}, {}, {
+    const props = mockFieldProps({
       children: 'bar',
       disabled: true,
     });
@@ -94,12 +96,13 @@ describe('<Checkbox />', () => {
 
 
   test('Should be render error text', () => {
-    const props = mockFieldProps({}, {
-      error: 'error text',
-    }, {
+    const props = mockFieldProps({
       children: 'bar',
       disabled: true,
       shouldDisplayError: () => true,
+      meta: {
+        error: 'error text',
+      },
     });
 
     const wrapper = shallow(<Checkbox {...props} />);
