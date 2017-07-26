@@ -12,6 +12,7 @@ import {
 
 const SampleForm = ({ handlers }) => (
   <form onSubmit={handlers.onSubmit}>
+    <h2>Input</h2>
     <div>
       <label>Input</label>
       <Input type="text" name="input" label="Input" placeholder="Placeholder text..." />
@@ -23,6 +24,12 @@ const SampleForm = ({ handlers }) => (
     </div>
 
     <div>
+      <label>Input (validating)</label>
+      <Input type="text" name="__input" value="validating ..." shouldDisplaySpinner={() => true} />
+    </div>
+
+    <h2>Textarea</h2>
+    <div>
       <label>Textarea</label>
       <Textarea name="textarea" label="Textarea" placeholder="Placeholder text..." />
     </div>
@@ -32,6 +39,12 @@ const SampleForm = ({ handlers }) => (
       <Textarea name="_textarea" value="disabled textarea" disabled />
     </div>
 
+    <div>
+      <label>Textarea (validating)</label>
+      <Textarea name="__textarea" value="validating ..." shouldDisplaySpinner={() => true} />
+    </div>
+
+    <h2>Select</h2>
     <div>
       <label>Select</label>
       <Select name="select" label="Select">
@@ -45,6 +58,16 @@ const SampleForm = ({ handlers }) => (
     <div>
       <label>Select (disabled)</label>
       <Select name="_select" disabled>
+        <option value="">Select</option>
+        <option value="opt1">Option 1</option>
+        <option value="opt2">Option 2</option>
+        <option value="opt3">Option 3</option>
+      </Select>
+    </div>
+
+    <div>
+      <label>Select (validating)</label>
+      <Select name="__select" shouldDisplaySpinner={() => true}>
         <option value="">Select</option>
         <option value="opt1">Option 1</option>
         <option value="opt2">Option 2</option>
@@ -76,6 +99,7 @@ const SampleForm = ({ handlers }) => (
       </Select>
     </div>
 
+    <h2>Checkbox</h2>
     <div>
       <label>Checkbox</label>
       <FieldGroup name="checkbox" label="Checkbox" multiple>
@@ -92,6 +116,7 @@ const SampleForm = ({ handlers }) => (
       </FieldGroup>
     </div>
 
+    <h2>Radio</h2>
     <div>
       <label>Radio</label>
       <FieldGroup name="radio" label="Radio">
@@ -108,7 +133,7 @@ const SampleForm = ({ handlers }) => (
       </FieldGroup>
     </div>
 
-    <div>
+    <div style={{ marginTop: '3em' }}>
       <button type="submit">Submit!</button>
     </div>
   </form>

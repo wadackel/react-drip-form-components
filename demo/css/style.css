@@ -52,6 +52,16 @@ footer * {
   margin: 0;
 }
 
+form h2 {
+  margin: 2em 0 1em;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+form h2:first-child {
+  margin-top: 0;
+}
+
 form > div {
   margin: 2rem 0;
 }
