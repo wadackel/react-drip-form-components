@@ -1,7 +1,9 @@
+import styled from 'styled-components';
+
 import Field from './Field';
 import { bind } from '../theme';
 
-const SelectField = Field.extend`
+const SelectField = styled(Field)`
   &::after {
     display: block;
     position: absolute;
